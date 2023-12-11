@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vangia</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">    
+                <nav class="header__bar">
+                    <a class="header__logo" href="#">
+                        <svg width="168" height="55" viewBox="0 0 168 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.9149 7.10643L21.1276 29.7235L16.2979 39.0426L0 7.12773L9.9149 7.10643ZM30.4043 10.3617C30.4043 14.5107 25.2341 21.3405 25.2341 21.3405C24.5588 15.8736 21.956 10.8266 17.8936 7.10643H26.9362C27.3721 7.09797 27.8054 7.17547 28.2113 7.3345C28.6172 7.49353 28.9879 7.73099 29.3021 8.03329C29.6162 8.33559 29.8677 8.69681 30.0422 9.09634C30.2167 9.49587 30.3108 9.92585 30.3191 10.3617H30.4043Z" fill="#0F1428"/>
+                            <path d="M45.2128 38.3618C36.4468 38.3618 32.1277 37.2128 32.1277 31.9788C32.1277 26.7448 36.383 25.4469 45.2128 25.4469C43.9363 25.9808 42.8542 26.8932 42.1123 28.0612C41.3705 29.2291 41.0046 30.5964 41.0639 31.9788C41.0263 33.338 41.403 34.6765 42.1441 35.8165C42.8851 36.9566 43.9554 37.8443 45.2128 38.3618ZM35.7021 19.0852C35.7063 18.3539 35.927 17.6402 36.3364 17.0342C36.7457 16.4282 37.3253 15.957 38.0022 15.6801C38.679 15.4031 39.4227 15.3328 40.1394 15.4781C40.8562 15.6233 41.5139 15.9776 42.0295 16.4962C42.5451 17.0147 42.8956 17.6745 43.0367 18.392C43.1779 19.1096 43.1033 19.8528 42.8225 20.5281C42.5417 21.2033 42.0672 21.7803 41.4588 22.1861C40.8505 22.592 40.1355 22.8086 39.4042 22.8086C38.9155 22.8114 38.431 22.7169 37.9792 22.5306C37.5273 22.3442 37.1171 22.0697 36.7725 21.7231C36.4279 21.3765 36.1558 20.9647 35.972 20.5118C35.7882 20.0589 35.6965 19.5739 35.7021 19.0852V19.0852ZM58.0638 25.2129V38.4256H49.1915V20.149C49.1915 15.0426 47.0638 13.4469 47.0638 13.4469C54.9574 13.4469 58.0638 16.4256 58.0638 25.149V25.2129Z" fill="#0F1428"/>
+                            <path d="M65.2341 17.383L74.1277 13.4469V38.3618H65.2341V17.383ZM91.6383 22.4256V38.3618H82.7447V21.7873C82.7447 18.5745 81.5319 17.0639 79.9149 16.6596C79.0045 16.4532 78.0594 16.4532 77.149 16.6596C79.2107 14.6701 81.9254 13.498 84.7873 13.3618C90.1064 13.4469 91.6383 17.149 91.6383 22.4256Z" fill="#0F1428"/>
+                            <path d="M97 24.1703C97.0678 22.045 97.771 19.9888 99.0187 18.267C100.266 16.5452 102.001 15.2368 104 14.5107C103.553 16.2554 104.511 21.0852 106.915 25.6384C108.529 29.0792 111.043 32.0198 114.192 34.149C112.754 34.5636 111.262 34.7643 109.766 34.7447C102.404 34.8511 97 30.0639 97 24.1703ZM123.66 46.149C123.899 47.818 123.681 49.5207 123.029 51.0757C122.377 52.6306 121.316 53.9796 119.957 54.9788C119.957 54.9788 122.915 48.1064 114.106 48.1064H105.979C101.149 48.1064 98.1064 45.9788 98.1064 42.532C98.1064 38.0639 103.17 36.0426 103.17 36.0426C103.17 36.0426 101.191 39.9788 105.702 39.9788H114.83C118.936 39.9788 123.085 41.8511 123.66 46.149ZM105.404 14.0639C106.82 13.6447 108.29 13.4368 109.766 13.4469C117.191 13.4469 122.532 18.2128 122.532 24.0852C122.453 26.1969 121.747 28.2373 120.505 29.9463C119.262 31.6553 117.538 32.9554 115.553 33.6809C116 31.9362 115.064 27.1064 112.617 22.5533C111.02 19.1263 108.528 16.1935 105.404 14.0639V14.0639ZM117.319 9.80856C115.135 9.94531 113.093 10.9395 111.638 12.5745C111.638 12.5745 113.085 5.82985 118.021 4.40432C120.915 3.59581 124 7.12771 121.809 11.9362C121.249 11.2879 120.561 10.7624 119.788 10.3925C119.016 10.0227 118.175 9.81668 117.319 9.78729V9.80856Z" fill="#0F1428"/>
+                            <path d="M137.915 5.27663C137.915 6.32115 137.605 7.34219 137.024 8.21038C136.443 9.07856 135.618 9.75486 134.653 10.1536C133.687 10.5523 132.625 10.6556 131.601 10.4502C130.577 10.2449 129.637 9.74024 128.9 9.00016C128.163 8.26009 127.662 7.31792 127.46 6.29296C127.259 5.26801 127.367 4.20639 127.769 3.2426C128.172 2.27881 128.852 1.45618 129.722 0.87895C130.593 0.301717 131.615 -0.00416781 132.66 4.39532e-05C133.352 -0.00279498 134.039 0.131918 134.679 0.39635C135.319 0.660783 135.901 1.04967 136.39 1.5405C136.878 2.03133 137.265 2.61431 137.527 3.25565C137.789 3.89699 137.921 4.58392 137.915 5.27663V5.27663ZM128.191 17.383L137.064 13.4469V38.3617H128.191V17.383Z" fill="#0F1428"/>
+                            <path d="M155.043 38.3618C146.277 38.3618 141.936 37.2128 141.936 31.9788C141.936 26.7448 146.191 25.4469 155.043 25.4469C153.746 25.9638 152.641 26.869 151.88 28.0384C151.118 29.2078 150.736 30.5841 150.787 31.9788C150.758 33.3504 151.15 34.6979 151.911 35.8393C152.672 36.9808 153.765 37.8612 155.043 38.3618V38.3618ZM145.511 19.0852C145.511 18.3488 145.729 17.6289 146.138 17.0166C146.547 16.4043 147.129 15.927 147.809 15.6452C148.49 15.3634 149.238 15.2897 149.96 15.4333C150.683 15.577 151.346 15.9316 151.867 16.4523C152.388 16.9731 152.742 17.6365 152.886 18.3588C153.03 19.081 152.956 19.8297 152.674 20.5101C152.392 21.1904 151.915 21.772 151.303 22.1811C150.69 22.5902 149.97 22.8086 149.234 22.8086C148.744 22.8114 148.259 22.717 147.806 22.5309C147.353 22.3448 146.941 22.0707 146.595 21.7243C146.249 21.378 145.974 20.9664 145.788 20.5134C145.602 20.0604 145.508 19.5749 145.511 19.0852V19.0852ZM167.894 25.2129V38.4256H159V20.149C159 15.0426 156.872 13.4469 156.872 13.4469C164.766 13.4469 167.894 16.4256 167.894 25.149V25.2129Z" fill="#0F1428"/>
+                            </svg>
+                    </a>
+                    <ul class="header__items header__items-burger">
+                        <li class="header__item">
+                            <a class="header__link" href="#!">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" href="#!">Products</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" href="#!">Promotions</a>
+                        </li>
+                    </ul>
+                        <a class="header__cart" href="#!">
+                                <img class="header__cart-img" src="images/icons/cart-img.png" alt="">
+                            <div class="header__cart-numb">
+                                2
+                            </div>
+                        </a>
+                    <!-- <button class="header__burger">
+                        <img class="header__burger-img" src="images/icons/menu.png" alt="">
+                    </button> -->
+                    <div class="burger">
+                        <span></span>
+                    </div> 
+                </nav>
+                <div class="header__content">
+                    <div class="header__inner">
+                        <div class="header__name">
+                            ALL NATURAL
+                        </div>
+                        <h1 class="header__title">
+                            Select <span>beauty</span> 
+                            for your skin
+                        </h1>
+                        <div class="header__text">
+                            Vangia offers high quality, effective products at unbeatable prices. Our team of experts have formulated a range of products with the finest ingredients to satisfy your needs.
+                        </div>
+                        <div class="header__btn">
+                            <a href="#!" class="header__btn-link">
+                                View Products
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__content-imgblock">
+                        <img class="header__content-img" src="images/header-woman-img.png" alt="">
+                        <img class="header__content-cards" src="images/cards.png" alt="" >
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="partners">
+                <div class="container">
+                    <h2 class="partners__title">
+                        Our Partners
+                    </h2>
+                    <ul class="partners__items">
+                        <li class="partners__item">
+                            <img class="partners__img" src="images/partners/partners-boss.png" alt="partners-logo">
+                        </li>
+                        <li class="partners__item">
+                            <img class="partners__img" src="images/partners/partners-VOGUE.png" alt="partners-logo">
+                        </li>
+                        <li class="partners__item">
+                            <img class="partners__img" src="images/partners/partners-amazon.png" alt="partners-logo">
+                        </li>
+                        <li class="partners__item">
+                            <img class="partners__img" src="images/partners/partners-google.png" alt="partners-logo">
+                        </li>
+                        <li class="partners__item">
+                            <img class="partners__img" src="images/partners/partners-payPal.png" alt="partners-logo">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="products">
+                <div class="container">
+                    <div class="products__name">
+                        ALL NATURAL PRODUCTS
+                    </div>
+                    <h2 class="products__title">
+                        Formulated With The Finest Ingredients
+                    </h2>
+                    <div class="products__content">
+                        <div class="products__item">
+                            <img class="products__img" src="images/icons/products__flowers.svg" alt="">
+                            <div class="products__numb">
+                                120
+                            </div>
+                            <h3 class="products__subtitle">
+                                Flavonoids 
+                            </h3>
+                            <p class="products__text">
+                                Skin care without all the fuss. The smallest bottle is perfect for traveling or to keep at work.
+                            </p>
+                        </div>
+                        <div class="products__item">
+                            <img class="products__img" src="images/icons/products__mushrooms.svg" alt="">
+                            <div class="products__numb">
+                                80
+                            </div>
+                            <h3 class="products__subtitle">
+                                Stilbenes 
+                            </h3>
+                            <p class="products__text">
+                                We use only the purest ingredients that are sourced locally and organic where possible.
+                            </p>
+                        </div>
+                        <div class="products__item">
+                            <img class="products__img" src="images/icons/products__bush.svg" alt="">
+                            <div class="products__numb">
+                                112
+                            </div>
+                            <h3 class="products__subtitle">
+                                Phelonic acid
+                            </h3>
+                            <p class="products__text">
+                                Natural, plant-based ingredients that, whole food goodness, with no harmful chemicals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="solution">
+                <div class="container">
+                    <div class="solution__inner">
+                        <div class="solution__infoblock">
+                            <div class="solution__name">
+                                OUR PRODUCTS
+                            </div>
+                            <h2 class="solution__title">
+                                Solution For Every Skin Type And Need
+                            </h2>
+                            <p class="solution__text">To suit even the most sensitive skin, these ingredients should be 100% pure and completely natural. ut labore et dolore magna Lorem ipsum dolor sit amet, consetetur</p>
+                            <p class="solution__text">Color additives can be combined labore et dolore magna Lorem ipsum dolor sit amet, consetetur</p>
+                            <a href="#!" class="solution__link">
+                                Read More
+                            </a>
+                        </div>
+                        <img class="solution__img" src="images/solution__woman.png" alt="-">
+                    </div>  
+                </div>
+            </section>
+            <section class="recipes">
+                <div class="container">
+                    <h2 class="recipes__title-main">
+                        Few Types of Recipes
+                    </h2>
+                    <div class="recipes__buttons">
+                        <button class="recipes__button" data-filter=".body-care">Body Care</button>
+                        <button class="recipes__button" data-filter=".skin-care">Skin Care</button>
+                        <button class="recipes__button" data-filter=".hair-care">Hair Care</button>
+                        <button class="recipes__button" data-filter=".perfumes">Perfumes</button>
+                    </div>
+                        <div class="recipes__inner">
+                        <div class="recipes__block mix body-care">
+                            <ul class="recipes__items">
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/garnier.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        GARNIER
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/pantene.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        PANTENE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/dove.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        DOVE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/clinique.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        CLINIQUE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="recipes__block mix skin-care">
+                            <ul class="recipes__items">
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/garnier.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        GARNIER
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/pantene.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        PANTENE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/dove.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        DOVE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/clinique.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        CLINIQUE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="recipes__block mix hair-care">
+                            <ul class="recipes__items">
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/garnier.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        GARNIER
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/pantene.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        PANTENE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/dove.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        DOVE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/clinique.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        CLINIQUE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="recipes__block mix perfumes">
+                            <ul class="recipes__items">
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/garnier.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        GARNIER
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/pantene.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        PANTENE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/dove.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        DOVE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                                <li class="recipes__item">
+                                    <img class="recipes__img" src="images/recipes/clinique.png" alt="" >
+                                    <h3 class="recipes__title">
+                                        CLINIQUE
+                                    </h3>
+                                    <p class="recipes__text">
+                                        Product applied to the skin and various body parts to make 
+                                    </p>
+                                    <div class="recipes__price">    
+                                        $52.99
+                                    </div>
+                                    <a class="recipes__btn" href="#!">
+                                        Add to Cart
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recipes__inner-btn"> 
+                    <a  class="recipes__btn-more" href="#!">See More</a>
+                </div>
+                </div>
+            </section>
+            <section class="purifying">
+                <div class="container">
+                    <div class="purifying__inner">
+                        <img class="purifying__main-img" src="images/purifying/purifying-bg.png" alt="">
+                        <img class="purifying__img-1" src="images/purifying/product-1.png" alt="">
+                        <img class="purifying__img-2" src="images/purifying/product-2.png" alt="">
+                        <img class="purifying__img-3" src="images/purifying/product-3.png" alt="">
+                        <div class="purifying__info">
+                            <h2 class="purifying__title">
+                                Purifying Skin Routine
+                            </h2>
+                            <p class="purifying__text">
+                                To suit even the most sensitive skin, these ingredients should be 100% pure and completely natural. ut labore et dolore magna Lorem ipsum dolor sit amet, consetetur
+                            </p>
+                            <p class="purifying__text">
+                                Color additives can be combined labore et dolore magna Lorem ipsum dolor sit amet, consetetur
+                            </p>
+                            <div class="purifying__btn">
+                                <a class="purifying__link" href="#!" >Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="testimonials">
+                <div class="container">
+                    <h2 class="testimonials__title">
+                        Testimonials
+                    </h2>
+                    <h3 class="testimonials__subtitle">
+                        What our loved customers say about our amazing products.
+                    </h3>
+                    <div class="testimonials__slider">
+                        <div class="testimonials__item">
+                            <img class="testimonials__avatar" src="images/avatar-1.png" alt="">
+                            <div class="testimonials__name">
+                                Grace Chavez
+                            </div>
+                            <p class="testimonials__text">
+                                “ I found Vangia just by chance and it has been the best thing to happen to me in a long time. I'm finally able to get the products I need, “
+                            </p>
+                        </div>
+                        <div class="testimonials__item">
+                            <img class="testimonials__avatar" src="images/avatar-2.png" alt="">
+                            <div class="testimonials__name">
+                                Hamza McMahon
+                            </div>
+                            <p class="testimonials__text">
+                                “ I'm not sure what to say but Vangia is the best product site I've ever come across. It's so easy to search for products  “
+                            </p>
+                        </div>
+                        <div class="testimonials__item">
+                            <img class="testimonials__avatar" src="images/avatar-1.png" alt="">
+                            <div class="testimonials__name">
+                                Grace Chavez
+                            </div>
+                            <p class="testimonials__text">
+                                “ I found Vangia just by chance and it has been the best thing to happen to me in a long time. I'm finally able to get the products I need, “
+                            </p>
+                        </div>
+                        <div class="testimonials__item">
+                            <img class="testimonials__avatar" src="images/avatar-2.png" alt="">
+                            <div class="testimonials__name">
+                                Hamza McMahon
+                            </div>
+                            <p class="testimonials__text">
+                                “ I'm not sure what to say but Vangia is the best product site I've ever come across. It's so easy to search for products  “
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="container">
+                    <div class="subscribe__inner">
+                        <div class="subscribe__info">
+                            <h3 class="subscribe__title">
+                                Subscribe Newsletter
+                            </h3>
+                            <p class="subscribe__text">
+                                Keep in touch and never miss out on our latest products
+                            </p>
+                        </div>
+                        <input class="subscribe__input" type="email" placeholder="Enter your email">
+                        <div class="subscribe__linkblock">
+                            <a class="subscribe__btn" href="#!">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__info">
+                        <img class="footer__logo" src="images/icons/logo-footer.png" alt="">
+                        <p class="footer__text">
+                            Best online cosmetic shop for all your beauty products
+                        </p>
+                        <div class="footer__social">
+                            <a href="#!" class="footer__social-link">
+                                <img class="footer__social-img" src="images/icons/facebook-footer.png" alt="">
+                            </a>
+                            <a href="#!" class="footer__social-link">
+                                <img class="footer__social-img" src="images/icons/twitter-footer.png" alt="">
+                            </a>
+                            <a href="#!" class="footer__social-link">
+                                <img class="footer__social-img" src="images/icons/lindedin-footer.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__tables">
+                        <ul class="footer__items">
+                            <h4 class="footer__title">
+                                Company
+                            </h4>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    About us     
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Jobs
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Records   
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Supports     
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__items">
+                            <h4 class="footer__title">
+                                Community
+                            </h4>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    For Artists
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Updates
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Advertising
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Investor
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__items">
+                            <h4 class="footer__title">
+                                Legal
+                            </h4>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Privacy   
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Policy
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Terms  
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Conditions    
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__items">
+                            <h4 class="footer__title">
+                                Social
+                            </h4>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Instagram     
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Twitter
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#!">
+                                    Youtube  
+                                </a>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+                <p class="footer__copyright">
+                    Copyright 2022.com, All rights reserved.
+                </p>    
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
