@@ -28,4 +28,19 @@ $(function(){
         $('.header__cart').toggleClass('header__cart-burger');
         $('.header__items').toggleClass('header__items-burger');
     })
+    $('.recipes__inner-btn').on('click',function(){
+        $('.crUsluga__buttonPlace').toggleClass('crUsluga__buttonPlace-block');
+        $('.crUsluga-form').toggleClass('crUsluga-form-active');
+        $('.crUsluga__btn').toggleClass('dn');
+    })
+    $('.crUsluga__buttonPlace').on('click',function(){
+      $('.crUsluga__buttonPlace-block').toggleClass('crUsluga__buttonPlace-block');
+      $('.crUsluga-form').toggleClass('crUsluga-form-active');
+      $('.crUsluga__btn').toggleClass('dn');
+    })
+    $('.crUsluga__btn-accept').on('click',function(){
+      $('.crUsluga__buttonPlace-block').toggleClass('crUsluga__buttonPlace-block');
+      $('.crUsluga-form').toggleClass('crUsluga-form-active');
+      $('.crUsluga__btn').toggleClass('dn');
+    })
 })
