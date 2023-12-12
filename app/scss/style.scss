@@ -9,7 +9,9 @@
 //     display: flex !important;
 // }
 
-
+.df{
+    display: flex;
+}
 
 .burger{
     display: none;
@@ -500,8 +502,10 @@
         }
     }
     &__inner-btn{
-        text-align: center;
-        margin-top: 200px;
+        display: block;
+        background: transparent;
+        border: none;
+        margin: 200px auto 0 auto;
     }
     &__btn-more{
         padding: 28px 85px;
@@ -521,6 +525,42 @@
         line-height: 40px;
         font-weight: 600;
         border-bottom: 2px solid #0F1428;
+    }
+    &__btn-change{
+        display: block;
+        margin: auto 0;
+        border-top: 1px solid #0F1428;
+        border-left: 1px solid #0F1428;
+        border-bottom: 1px solid #0F1428;
+        color: #0F1428;
+        &:hover{
+            border-top: 1px dashed;
+            border-left: 1px dashed;
+            border-bottom: 1px dashed;
+        }
+    }
+    &__btn-trash{
+        display: block;
+        margin: auto 0;
+        border-top: 1px solid #0F1428;
+        border-right: 1px solid #0F1428;
+        border-bottom: 1px solid #0F1428;
+        color: #0F1428;
+        &:hover{
+            border-top: 1px dashed;
+            border-right: 1px dashed;
+            border-bottom: 1px dashed;
+        }
+    }
+    &__img-change,&__img-trash{
+        width: 60px;
+        height: 60px;
+        z-index: -1;
+        transition:all 0.3s ease;
+        margin: 15px 0px 15px 0;
+        &:hover{
+            transform: scale(-1, 1);
+        }
     }
 }
 .purifying {
