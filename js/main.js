@@ -1,3 +1,4 @@
+<<<<<<< HEAD:js/main.js
 $(function(){
     var mixer = mixitup('.recipes__inner',{
         load:{
@@ -44,3 +45,51 @@ $(function(){
       $('.crUsluga__btn').toggleClass('dn');
     })
 })
+=======
+$(function(){
+    var mixer = mixitup('.recipes__inner',{
+        load:{
+            filter:'.body-care'
+        }
+    });  
+    $('.testimonials__slider').slick({
+        slidesToShow:2,
+        slidesToScroll:1,
+        dots:true,
+        arrows:true,
+        prevArrow: '<img class="testimonials__sliderprev-img" src="images/icons/left__arrow.svg">',
+        nextArrow: '<img class="testimonials__slidernext-img" src="images/icons/right__arrow.svg">',
+        responsive:[
+            {
+                breakpoint:1300,
+                settings:{
+                    slidesToShow:1,
+                    slidesToScroll:1,
+                }
+            },
+        ]
+    });
+    $('.burger').on('click',function(){
+        $('.burger').toggleClass('active');
+        $('.header__bar').toggleClass('header__bar-open');
+        $('.header__logo').toggleClass('header__logo-burger');
+        $('.header__cart').toggleClass('header__cart-burger');
+        $('.header__items').toggleClass('header__items-burger');
+    })
+    $('.recipes__inner-btn').on('click',function(){
+        $('.crUsluga__buttonPlace').toggleClass('crUsluga__buttonPlace-block');
+        $('.crUsluga-form').toggleClass('crUsluga-form-active');
+        $('.crUsluga__btn').toggleClass('dn');
+    })
+    $('.crUsluga__buttonPlace').on('click',function(){
+      $('.crUsluga__buttonPlace-block').toggleClass('crUsluga__buttonPlace-block');
+      $('.crUsluga-form').toggleClass('crUsluga-form-active');
+      $('.crUsluga__btn').toggleClass('dn');
+    })
+    $('.crUsluga__btn-accept').on('click',function(){
+      $('.crUsluga__buttonPlace-block').toggleClass('crUsluga__buttonPlace-block');
+      $('.crUsluga-form').toggleClass('crUsluga-form-active');
+      $('.crUsluga__btn').toggleClass('dn');
+    })
+})
+>>>>>>> 7da0c4e8ab211707a5a84c619e3912f184a3ca34:app/js/main.js
