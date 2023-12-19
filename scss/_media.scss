@@ -1,0 +1,487 @@
+@media (max-width:1440px){
+    .subscribe{
+        &__input{
+            max-width: 360px;
+            margin-right: 20px;
+        }
+        &__inner{
+            display: flex;
+        }
+        &__info{
+            margin-right: 30px;
+        }
+    }
+}
+@media (max-width:1025px){
+    .header{ 
+        &__content{
+            &-img{
+                display: none;
+            }
+        }
+    }
+    .partners{
+        &__items{
+            row-gap: 32px
+        }
+    }   
+    .solution{
+        &__img{
+            display: none;
+        }
+        &__infoblock{
+            text-align: center;
+            margin: 0  auto;
+            max-width: 800px;
+        }
+    }
+    .recipes{
+        &__items{
+            flex-wrap: wrap;
+        }
+        &__item{
+            max-width: 446px;
+            margin-top: 60px;
+        }
+        &__img{
+            margin-top: 20px;
+            margin: 0 auto;
+        }
+    }
+    .purifying{
+        &__main-img{
+            display: none;
+        }
+        &__img-1, 
+        &__img-2, 
+        &__img-3{
+            bottom: -35px;
+        }
+        &__img-1{
+            left:100px;
+        }
+        &__img-2{
+            left:325px;
+        }
+        &__img-3{
+            left: 550px;
+        }
+        &__info{
+            text-align: center;
+        }
+        &__btn{
+            margin-bottom: 140px;
+        }
+    }
+    .subscribe{
+        &__input{
+            max-width: unset;
+            margin-bottom: 50px;
+        }
+        &__inner{
+            display: block;
+        }
+        &__info{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__title{
+            margin-bottom: 0;
+        }
+        &__btn{
+            padding: 24px;
+            text-align: center;
+        }
+        &__linkblock{
+            margin-top: 20px;
+            margin-bottom: -20px;
+            text-align: center;
+        }
+    }
+    .footer{
+        &__info{
+            margin-right: 0;
+        }
+        &__text{
+            margin-right: 63px;
+        }
+        &__tables{
+            column-gap: 70px;
+        }
+    }
+}
+@media (max-width:769px){
+    .burger { display: flex;
+            margin-left: auto; 
+            width: 30px;
+    }
+    .header__bar-open{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+    .header__link{
+        color: aliceblue;
+        z-index: 100;
+    }
+
+    .header{
+        &__item{
+            margin-bottom: 50px;
+            position: relative;
+
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 200px;
+                height: 2px;
+                background-color: #fa6430;
+                bottom: 0px;
+                left: 250px;
+            }
+        }
+        &__items{
+            &-burger{
+                display: none;
+            }
+            display: block;
+            margin-top: 80px;
+        }
+        &__logo-burger{
+            margin-bottom: -50px;
+            align-items: center;
+            order: 1;
+            path{
+                fill: #fff;
+            }
+        }
+        &__link{
+        }
+        &__cart{
+            &-burger{
+                display: none;
+            }
+            margin-right: unset;
+            margin-left: 450px;
+        }
+        &__items{
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+        &__title{
+            font-size: 110px;
+        }
+    }
+    .partners{
+        &__items{
+            row-gap: 40px;
+        }
+        &__title{
+            margin-bottom: 100px;
+        }
+    }
+    .products {
+        padding-top: 160px;
+        &__content{
+            flex-wrap: wrap;
+            row-gap: 100px;
+        }
+    }
+    .recipes{
+        &__item{
+            margin: 0 auto;
+        }
+        &__items{
+           row-gap: 100px;
+        }
+        .mixitup-control-active{
+            font-size: 20px;
+        }
+    }
+    .purifying{
+        &__img-1{
+            left:-40px;
+        }
+        &__img-2{
+            left:180px;
+        }
+        &__img-3{
+            left: 400px;
+        }
+    }
+    .testimonials{
+        margin-bottom: 0px;
+    }
+
+    .footer{
+        &__tables{
+            display: none;
+        }
+        &__info{
+            margin: 0 auto;
+            max-width: unset;
+        }
+        &__logo{
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        &__text{
+            margin-right: 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__social{
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    }    
+}
+@media (max-width:426px){
+    .header{
+        &__bar-open{
+            height: 100%
+        }
+        &__item{
+            margin-bottom: 50px;
+            position: relative;
+
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 200px;
+                height: 2px;
+                background-color: #fa6430;
+                bottom: 0px;
+                left: 75px;
+            }
+        }
+        
+        &__cart{
+            margin-left: 90px;
+        }
+        &__content{
+            text-align: center;
+        }
+        &__title{
+            font-size: 99px;
+            line-height:115px;
+        }
+    }
+    .partners{
+        &__items{
+            margin: unset;
+        }
+    }
+    .recipes{
+        &__buttons{
+            column-gap: unset;
+        }
+        &__button{
+            line-height: 35px;
+        }
+        .mixitup-control-active{
+            line-height: 35px;
+        }
+    }
+    .purifying{
+        &__img-1{
+            left: 40px;
+        }
+        &__img-2,
+        &__img-3{
+            display: none;
+        }
+    }
+    .testimonials{
+        &__sliderprev-img,
+        &__slidernext-img{
+            width: 50px;
+        }
+        &__item{
+            padding: unset;
+        }
+    }
+    .subscribe{
+        margin-top: 250px;
+        &__info{
+            margin-right: unset;
+        }
+        &__inner{
+            padding: 72px 25px;
+        }
+    }
+}
+@media (max-width:376px){
+    .header{
+
+        &__cart{
+            margin-right: unset;
+            margin-left: 60px;
+        }
+        &__title{
+            font-size: 90px;
+        }
+        &__item{
+            margin-bottom: 50px;
+            position: relative;
+
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 200px;
+                height: 2px;
+                background-color: #fa6430;
+                bottom: 0px;
+                left: 50px;
+            }
+        }
+    }
+    .solution{
+        padding-top: 200px;
+    }
+    .recipes{
+        &__buttons{
+            margin-bottom: 80px;
+        }
+        &__button,
+        .mixitup-control-active{
+            font-size: 18px;
+        }
+    }
+
+    .purifying{
+        &__img-1{
+            left: 20px;
+        }
+    }
+    .testimonials{
+        margin-top: 70px;
+        &__subtitle{
+            margin-bottom: 80px;
+        }
+    }
+}
+@media (max-width:321px){
+    .header {
+        &__bar-open{
+            padding: 50px 15px;
+            height: 100%;
+        }
+        &__cart{
+            display: none;
+        }
+        &__title{
+            font-size: 80px;
+            line-height: 103px;
+        }
+        &__text {
+            font-size: 17px;
+        }
+        &__name{
+            line-height:136%;
+        }
+        &__item{
+            margin-bottom: 50px;
+            position: relative;
+
+            &::before{
+                content: " ";
+                position: absolute;
+                width: 200px;
+                height: 2px;
+                background-color: #fa6430;
+                bottom: 0px;
+                left: 46px;
+            }
+        }
+    }
+    .partners{
+        &__title{
+            font-size: 58px;
+            line-height: 65px;
+        }
+    }
+    .products{
+        &__title{
+            margin-top: 20px;
+            font-size: 40px;
+            line-height: 64px;
+        }
+        &__name{
+            line-height:136%;
+        }
+    }
+    .solution{
+        padding-top: 150px;
+        &__title{
+            font-size: 42px;
+            line-height: 60px;
+        }
+      &__name{
+            line-height:136%;
+        } 
+    } 
+    .purifying{
+        &__inner{
+            padding: 80px 0 120px 0px;
+        }
+        &__img-1{
+            bottom: -50px;
+            left: -3px;
+        }
+    }
+    .testimonials{
+        &__title{
+            font-size: 50px;
+        }
+        &__name{
+            margin-top: 10px;
+            font-size: 22px;
+            line-height: 194%;
+        }
+        &__text{
+            font-size: 17px;
+        }
+    }
+    .slick-dots{
+        bottom: -70px;
+        & button{
+            width: 15px;
+            height: 15px;
+        } 
+        & li{
+            margin: 0 10px;
+        }
+    }
+    .subscribe{
+        &__input
+        { padding: 23px 15px;
+            &::placeholder{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                color: #6A6A6A;
+            }
+        }
+        &__inner{
+            padding: 30px 50px;
+        }
+        &__btn{
+            font-size: 20px;
+        }
+        &__linkblock{
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+    }
+}
